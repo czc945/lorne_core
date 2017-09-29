@@ -1,7 +1,7 @@
 package com.lorne.core.framework.utils.encode;
 
-import org.apache.axis.encoding.Base64;
 
+import java.util.Base64;
 
 /**
  * Created by yuliang on 2015/11/13.
@@ -11,11 +11,11 @@ public class Base64Utils {
 
 
     public static String encode(byte[] bs){
-        return Base64.encode(bs);
+        return Base64.getEncoder().encodeToString(bs);
     }
 
     public static byte[] decode(String str){
-        return Base64.decode(str);
+        return Base64.getDecoder().decode(str);
     }
 
 
